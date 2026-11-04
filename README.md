@@ -182,7 +182,7 @@ JavaScript puro, sin TypeScript y sin build: el `main` es `extension.js`, tipado
 tabs, con punto y coma y con comillas dobles. Dependencia de runtime: `libxml2-wasm`.
 
 ```bash
-git clone https://github.com/zeluizr/adobe-commerce-snippets.git
+git clone https://github.com/commentemeapp/adobe-commerce-snippets.git
 cd adobe-commerce-snippets
 npm install
 

@@ -2,7 +2,7 @@
 	"name": "adobe-commerce-snippets",
 	"displayName": "Snippets for Adobe Commerce",
 	"description": "Snippets para Adobe Commerce (Magento Open Source y Adobe Commerce) y validación en vivo de los XML contra los XSD de tu propio proyecto.",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"publisher": "commenteme",
 	"icon": "images/icon.png",
 	"galleryBanner": {
@@ -12,11 +12,11 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/zeluizr/adobe-commerce-snippets.git"
+		"url": "https://github.com/commentemeapp/adobe-commerce-snippets.git"
 	},
-	"homepage": "https://github.com/zeluizr/adobe-commerce-snippets#readme",
+	"homepage": "https://github.com/commentemeapp/adobe-commerce-snippets#readme",
 	"bugs": {
-		"url": "https://github.com/zeluizr/adobe-commerce-snippets/issues"
+		"url": "https://github.com/commentemeapp/adobe-commerce-snippets/issues"
 	},
 	"engines": {
 		"vscode": "^1.90.0",
