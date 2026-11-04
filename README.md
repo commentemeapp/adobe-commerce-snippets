@@ -6,8 +6,8 @@
 
 **Snippets para Adobe Commerce y validación en vivo de los XML contra los XSD de tu propio proyecto.**
 
-[![version](https://img.shields.io/github/package-json/v/zeluizr/adobe-commerce-snippets/main?label=version&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.adobe-commerce-snippets)
-[![license](https://img.shields.io/github/license/zeluizr/adobe-commerce-snippets?label=licencia&labelColor=005278&color=FFBD38)](LICENSE)
+[![versión](https://img.shields.io/github/package-json/v/commentemeapp/adobe-commerce-snippets/main?label=versi%C3%B3n&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.adobe-commerce-snippets)
+[![license](https://img.shields.io/github/license/commentemeapp/adobe-commerce-snippets?label=licencia&labelColor=005278&color=FFBD38)](LICENSE)
 
 ## Instalación
 
