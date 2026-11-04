@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" width="100%" alt="Snippets for Adobe Commerce · Snippets y validación en vivo de los XML contra los XSD de tu propio proyecto">
+  <img src="assets/banner.png" width="100%" alt="Snippets for Adobe Commerce · Snippets para Adobe Commerce y validación en vivo de los XML contra los XSD de tu propio proyecto.">
 </p>
 
 # Snippets for Adobe Commerce
@@ -218,4 +218,4 @@ MIT, mira [LICENSE](LICENSE). Los snippets se escribieron a partir de la documen
 
 ---
 
-Hecho por [commente.me](https://commente.me) · hola@commente.me
+Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
