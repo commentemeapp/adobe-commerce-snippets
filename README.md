@@ -1,13 +1,12 @@
-<p align="center">
-  <img src="assets/banner.png" width="100%" alt="Snippets for Adobe Commerce · Snippets para Adobe Commerce y validación en vivo de los XML contra los XSD de tu propio proyecto.">
-</p>
+![Snippets for Adobe Commerce · Snippets y validación en vivo de los XML contra los XSD de tu proyecto.](.github/assets/banner.png)
 
 # Snippets for Adobe Commerce
 
 **Snippets para Adobe Commerce y validación en vivo de los XML contra los XSD de tu propio proyecto.**
 
-[![versión](https://img.shields.io/github/package-json/v/commentemeapp/adobe-commerce-snippets/main?label=versi%C3%B3n&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.adobe-commerce-snippets)
-[![license](https://img.shields.io/github/license/commentemeapp/adobe-commerce-snippets?label=licencia&labelColor=005278&color=FFBD38)](LICENSE)
+[![versión](https://badgen.net/vs-marketplace/v/commenteme.adobe-commerce-snippets?color=005278)](https://marketplace.visualstudio.com/items?itemName=commenteme.adobe-commerce-snippets)
+[![instalaciones](https://badgen.net/vs-marketplace/i/commenteme.adobe-commerce-snippets)](https://marketplace.visualstudio.com/items?itemName=commenteme.adobe-commerce-snippets)
+[![licencia](https://badgen.net/github/license/commentemeapp/adobe-commerce-snippets)](./LICENSE)
 
 ## Instalación
 
@@ -206,7 +205,7 @@ si lo commiteado no es exactamente lo que produce.
 
 **Ramas y publicación.** El trabajo sale de `dev` y llega por pull request; `dev → main` por merge de la rama
 entera (sin `qa` desde el 30/10/2026), y el commit de `main` lleva tag anotada de versión. `./scripts/instalar-hooks.sh` activa los hooks que
-cobran lo mismo en local. Una tag `v*` en `main` empaqueta el `.vsix` y lo adjunta a la Release de GitHub. La
+cobran lo mismo en local. No hay CI en GitHub: los tests corren en local antes de cada merge. La
 publicación en el Marketplace es manual, desde `main`, con `npx @vscode/vsce publish`: sube la versión en
 `package.json` y cierra el `CHANGELOG.md` antes, porque el Marketplace rechaza una versión repetida. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
@@ -216,6 +215,4 @@ Abre un PR contra `dev` con Conventional Commits; el mensaje describe el efecto,
 
 MIT, mira [LICENSE](LICENSE). Los snippets se escribieron a partir de la documentación de Adobe Commerce (Apache-2.0 y MIT), y la validación usa libxml2-wasm (MIT): mira [NOTICE](NOTICE).
 
----
-
-Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
+_Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
