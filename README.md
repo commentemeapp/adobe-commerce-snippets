@@ -4,9 +4,7 @@
 
 **Snippets para Adobe Commerce y validación en vivo de los XML contra los XSD de tu propio proyecto.**
 
-[![versión](https://badgen.net/vs-marketplace/v/commenteme.adobe-commerce-snippets?color=005278)](https://marketplace.visualstudio.com/items?itemName=commenteme.adobe-commerce-snippets)
-[![instalaciones](https://badgen.net/vs-marketplace/i/commenteme.adobe-commerce-snippets)](https://marketplace.visualstudio.com/items?itemName=commenteme.adobe-commerce-snippets)
-[![licencia](https://badgen.net/github/license/commentemeapp/adobe-commerce-snippets)](./LICENSE)
+Versión 0.2.3 · en desarrollo. Cambios en [CHANGELOG.md](CHANGELOG.md).
 
 ## Instalación
 
@@ -14,15 +12,15 @@
 code --install-extension commenteme.adobe-commerce-snippets
 ```
 
-O busca **«Snippets for Adobe Commerce»** en el Marketplace, o en Quick Open (`Cmd/Ctrl + P`): `ext install commenteme.adobe-commerce-snippets`. Requiere VS Code `>= 1.90.0`.
+O busca **«Snippets for Adobe Commerce»** en el Marketplace, o en Quick Open (`Cmd/Ctrl + P`): `ext install commenteme.adobe-commerce-snippets`.
 
-## Uso rápido
+## Uso
 
 Abre un `di.xml` de tu módulo y escribe `ac-di-`: el editor muestra los snippets. Si el XML declara un esquema `urn:magento:...`, los errores aparecen subrayados en el atributo o la etiqueta exactos, al abrir, al guardar y mientras escribes.
 
 ![Validación de un di.xml contra el XSD del proyecto y snippets ac-di-](images/preview.png)
 
-## Que incluye
+### Que incluye
 
 Para el desarrollo PHP de Adobe Commerce (Magento Open Source): cada `di.xml`, `events.xml`, `db_schema.xml`, layout y demás XML se valida contra los XSD de la versión exacta que tu tienda tiene instalada.
 
@@ -32,11 +30,9 @@ Para el desarrollo PHP de Adobe Commerce (Magento Open Source): cada `di.xml`, `
 - **Sin binarios ni Java**: usa libxml2 compilado en WebAssembly, el mismo motor de validación que usa la plataforma, y funciona igual en macOS, Linux y Windows.
 - **Snippets con fuente** de XML, PHP, templates, RequireJS y GraphQL: cada uno cita la página de la documentación de la que salió, y los de XML se validan en los tests contra los XSD oficiales.
 
-## Por que existe
+### Por que existe
 
 Hay extensiones de snippets para Adobe Commerce en el Marketplace, la mayoría sin cambios desde hace años, y hay herramientas que generan archivos y navegan entre clases. Ninguna valida el XML en vivo contra los XSD. Hasta ahora, eso pedía generar un catálogo de URN con `bin/magento dev:urn-catalog:generate` y otra extensión de XML con su propio servidor de lenguaje. Esta lo hace sola.
-
-## Documentación
 
 ### Validación de XML
 
@@ -162,20 +158,12 @@ navega entre clases, layouts o ACL: para eso ya existen otras herramientas.
 **`Ctrl + Espacio` no abre las sugerencias (macOS).** macOS usa ese atajo para cambiar la fuente de entrada. Usa
 `Cmd + I`, o libéralo en **Ajustes del Sistema → Teclado → Atajos de teclado → Fuentes de entrada**.
 
-### Estructura
+## Requisitos
 
-```
-.
-├── extension.js       # activate()/deactivate(), snippets y validación
-├── lib/               # lógica pura, sin la API vscode (testeable con node:test)
-├── data/fonte.json    # versión de la plataforma contra la que se prueban los snippets
-├── snippets/          # .code-snippets (generado desde lib/)
-├── images/            # ícono (PNG y SVG) e imagen del README
-├── scripts/           # generar snippets, bajar los XSD de prueba, ícono, imagen y hooks
-└── test/              # node:test
-```
+- VS Code `>= 1.90.0`.
+- Para validar, un proyecto de Adobe Commerce con `composer install` corrido: los XSD se leen de `vendor/` o de `app/code/`.
 
-### Desarrollo
+## Desarrollo
 
 JavaScript puro, sin TypeScript y sin build: el `main` es `extension.js`, tipado con JSDoc y `// @ts-check`. CommonJS,
 tabs, con punto y coma y con comillas dobles. Dependencia de runtime: `libxml2-wasm`.
@@ -209,10 +197,28 @@ cobran lo mismo en local. No hay CI en GitHub: los tests corren en local antes d
 publicación en el Marketplace es manual, desde `main`, con `npx @vscode/vsce publish`: sube la versión en
 `package.json` y cierra el `CHANGELOG.md` antes, porque el Marketplace rechaza una versión repetida. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
-## Contribuir · Licencia
+**Contribuir.** Abre un PR contra `dev` con Conventional Commits; el mensaje describe el efecto, no el cambio.
 
-Abre un PR contra `dev` con Conventional Commits; el mensaje describe el efecto, no el cambio.
+## Estructura
 
-MIT, mira [LICENSE](LICENSE). Los snippets se escribieron a partir de la documentación de Adobe Commerce (Apache-2.0 y MIT), y la validación usa libxml2-wasm (MIT): mira [NOTICE](NOTICE).
+```
+.
+├── extension.js       # activate()/deactivate(), snippets y validación
+├── lib/               # lógica pura, sin la API vscode (testeable con node:test)
+├── data/fonte.json    # versión de la plataforma contra la que se prueban los snippets
+├── snippets/          # .code-snippets (generado desde lib/)
+├── assets/            # banner antiguo, lo leen las versiones ya publicadas
+├── images/            # ícono (PNG y SVG) e imagen del README
+├── scripts/           # generar snippets, bajar los XSD de prueba, ícono, imagen y hooks
+└── test/              # node:test
+```
+
+## Licencia
+
+[MIT](./LICENSE). Los snippets se escribieron a partir de la documentación de Adobe Commerce (Apache-2.0 y MIT), y la validación usa libxml2-wasm (MIT): mira [NOTICE](NOTICE).
+
+Contacto: hablecon@commente.me
+
+---
 
 _Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
